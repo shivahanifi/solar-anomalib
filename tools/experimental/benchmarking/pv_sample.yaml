@@ -1,0 +1,17 @@
+# sample script to show grid search for two categories
+accelerator:
+  - cuda
+  - cpu
+benchmark:
+  seed: 42
+  model:
+    class_path: "Patchcore"
+  data:
+    class_path: Folder
+    init_args:
+      name: "pv"
+      normal_dir: "/home/shiva/Documents/code/anomalib/datasets/pv/train/good"
+      root: "./datasets/pv"
+      abnormal_dir: "/home/shiva/Documents/code/anomalib/datasets/pv/test/bad"
+      task: "classification"
+      image_size: [256, 256]

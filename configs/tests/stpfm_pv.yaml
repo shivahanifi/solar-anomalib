@@ -1,0 +1,16 @@
+dataset:
+  name: pv
+  format: folders
+  path: dataset/conform_3
+  normal_dir: test/good
+  abnormal_dir: test/bad
+  image_size: 256
+
+model:
+  name: stfpm  # Change this to the model you want to test
+  backbone: resnet18  # Backbone model, change if needed
+
+evaluation:
+  batch_size: 32
+  num_workers: 4
+  output_path: /home/shiva/Documents/code/anomalib/results/

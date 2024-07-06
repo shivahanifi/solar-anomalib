@@ -1,0 +1,18 @@
+class_path: anomalib.data.folder
+init_args:
+  root: ./datasets/pv
+  normal_dir: test/good
+  abnormal_dir: test/bad
+  image_size: 256
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 4
+  task: segmentation 
+  transform: /home/shiva/Documents/code/anomalib/transforms/transform_pv.py
+  train_transform: /home/shiva/Documents/code/anomalib/transforms/transform_pv.py
+  eval_transform: /home/shiva/Documents/code/anomalib/transforms/transform_pv.py
+  test_split_mode: from_dir  # Assuming you have a separate test directory
+  test_split_ratio: 0.2  # Ratio of test data if splitting from training directory
+  val_split_mode: same_as_test  # Validation split mode
+  val_split_ratio: 0.5  # Ratio of validation data from test split
+  seed: null  # Set a specific seed for reproducibility, if desired
